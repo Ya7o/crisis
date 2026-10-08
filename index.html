@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CRISIS — INDIA: Mysore and Chennai accommodation contacts and stay details.">
+  <meta name="description" content="CRISIS — INDIA: emergency numbers, accommodation contacts and stay details.">
   <meta name="theme-color" content="#f5f2eb">
   <title>CRISIS — INDIA</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23a92f24'/%3E%3Cpath d='M16 7v12m0 5v1' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -15,6 +15,15 @@
     header { padding-bottom: 32px; border-bottom: 2px solid var(--ink); margin-bottom: 32px; }
     h1 { font-size: clamp(2rem, 7vw, 4.5rem); font-weight: 800; letter-spacing: -.045em; line-height: 1.15; margin: 0; }
     h1 span { color: var(--accent); }
+    .emergency { border: 2px solid var(--accent); background: #fffdf7; padding: 28px; margin-bottom: 28px; }
+    .emergency h2 { margin-bottom: 14px; }
+    .emergency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .emergency-item { padding-top: 16px; border-top: 1px solid var(--line); }
+    .emergency-item:first-child, .emergency-item:nth-child(2) { border-top: 0; padding-top: 0; }
+    .emergency .phone { font-size: clamp(1.35rem, 4vw, 2rem); }
+    .procedure { margin: 0 0 28px; padding: 22px 28px; border-left: 4px solid var(--ink); background: #ece8df; }
+    .procedure strong { display: block; margin-bottom: 8px; }
+    .procedure p { margin: 0; }
     .contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
     article { border: 1px solid var(--line); border-top: 4px solid var(--accent); padding: 28px; background: #fffdf7; }
     h2 { font-size: 1.5rem; letter-spacing: .04em; margin: 0 0 24px; }
@@ -28,13 +37,40 @@
     .stay { margin-top: 24px; }
     .dates { font-size: 1.5rem; font-weight: 650; margin: 0; }
     a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
-    @media (max-width: 640px) { main { padding: 32px 0; } header { margin-bottom: 24px; padding-bottom: 24px; } .contacts { grid-template-columns: 1fr; gap: 20px; } article { padding: 24px; } }
-    @media print { body { background: white; } main { width: 100%; padding: 0; } article { break-inside: avoid; } .phone { color: var(--ink); text-decoration: none; } }
+    @media (max-width: 640px) {
+      main { padding: 32px 0; }
+      header { margin-bottom: 24px; padding-bottom: 24px; }
+      .emergency-grid, .contacts { grid-template-columns: 1fr; gap: 20px; }
+      .emergency-item:nth-child(2) { border-top: 1px solid var(--line); padding-top: 16px; }
+      article, .emergency { padding: 24px; }
+    }
+    @media print { body { background: white; } main { width: 100%; padding: 0; } article, .emergency { break-inside: avoid; } .phone { color: var(--ink); text-decoration: none; } }
   </style>
 </head>
 <body>
   <main>
     <header><h1>CRISIS <span>— INDIA</span></h1></header>
+
+    <section class="emergency" aria-labelledby="emergency">
+      <h2 id="emergency">EMERGENCY</h2>
+      <div class="emergency-grid">
+        <div class="emergency-item">
+          <p class="label">Police · Ambulance · Fire · Emergency</p>
+          <a class="phone" href="tel:112">112</a>
+        </div>
+        <div class="emergency-item">
+          <p class="label">Tourist Helpline · 24/7 · French available</p>
+          <a class="phone" href="tel:1363">1363</a>
+          <p><a href="tel:1800111363">1800-11-1363</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="procedure" aria-label="If phone and wallet are stolen">
+      <strong>PHONE + WALLET STOLEN</strong>
+      <p>1. Get somewhere safe → 2. Call 112 or 1363 → 3. Contact accommodation → 4. Block cards and SIM → 5. Police report → 6. Embassy if passport is missing.</p>
+    </section>
+
     <div class="contacts">
       <article aria-labelledby="mysore">
         <h2 id="mysore">MYSORE</h2>
