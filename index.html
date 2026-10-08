@@ -37,6 +37,10 @@
     .location-photo { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
     .stay { margin-top: 24px; }
     .dates { font-size: 1.5rem; font-weight: 650; margin: 0; }
+    .vault { margin-top: 28px; color: var(--muted); font-size: .92rem; }
+    .vault summary { cursor: pointer; user-select: none; width: fit-content; }
+    .vault p { margin: 12px 0 0; }
+    .vault a { color: var(--muted); text-underline-offset: 4px; }
     a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
     @media (max-width: 640px) {
       main { padding: 32px 0; }
@@ -100,6 +104,11 @@
         </div>
       </article>
     </div>
+
+    <details class="vault">
+      <summary>Backup documents</summary>
+      <p><a href="https://drive.google.com/drive/folders/1Loq6dqVXdvf8y0wexCrNyBEOVRs5uQDU" rel="nofollow noopener noreferrer" referrerpolicy="no-referrer">Open protected archive</a></p>
+    </details>
   </main>
 </body>
 </html>
