@@ -37,10 +37,8 @@
     .location-photo { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
     .stay { margin-top: 24px; }
     .dates { font-size: 1.5rem; font-weight: 650; margin: 0; }
-    .vault { margin: 0 0 28px; color: var(--muted); font-size: .92rem; }
-    .vault summary { cursor: pointer; user-select: none; width: fit-content; }
-    .vault p { margin: 12px 0 0; }
-    .vault a { color: var(--muted); text-underline-offset: 4px; }
+    .hidden-vault { color: inherit; text-decoration: none; display: inline-block; position: relative; }
+    .hidden-vault::after { content: ""; position: absolute; inset: -10px -8px; }
     a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
     @media (max-width: 640px) {
       main { padding: 32px 0; }
@@ -54,7 +52,7 @@
 </head>
 <body>
   <main>
-    <header><h1>CRISIS <span>— INDIA</span></h1></header>
+    <header><h1>CRISIS <span><a class="hidden-vault" href="https://drive.google.com/drive/folders/1Loq6dqVXdvf8y0wexCrNyBEOVRs5uQDU" rel="nofollow noopener noreferrer" referrerpolicy="no-referrer" aria-label="Archive">—</a> INDIA</span></h1></header>
 
     <section class="emergency" aria-labelledby="emergency">
       <h2 id="emergency">EMERGENCY</h2>
@@ -75,11 +73,6 @@
       <strong>PHONE + WALLET STOLEN</strong>
       <p>1. Get somewhere safe → 2. Call 112 or 1363 → 3. Call Sandy → 4. Contact accommodation → 5. Block cards and SIM → 6. Police report → 7. Embassy if passport is missing.</p>
     </section>
-
-    <details class="vault">
-      <summary>Backup documents</summary>
-      <p><a href="https://drive.google.com/drive/folders/1Loq6dqVXdvf8y0wexCrNyBEOVRs5uQDU" rel="nofollow noopener noreferrer" referrerpolicy="no-referrer">Open protected archive</a></p>
-    </details>
 
     <div class="contacts">
       <article aria-labelledby="international-contact">
